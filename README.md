@@ -9,7 +9,8 @@ Installation:
 
 go in your mission folder and open the init.sqf with a Editor and put the following line at the top in your init.sqf file:
 
-// to work correctly the following line must be on the top in your init.sqf
+// to work correctly the following line must be on the top in your init.sqf:
+
 execVM "addons\Igiload\IgiLoadInit.sqf";
 
 now download Igiload-Reloaded and unzip it. Now go in the Arma3_Server -> mpmissions -> Exile.YourMap folder and copy the addons folder in your Mission root. PBO your Mission and upload the Mission on your Server. 
