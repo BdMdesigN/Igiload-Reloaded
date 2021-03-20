@@ -6,15 +6,15 @@
 //  Version date: 2014.10.16                                                                                //
 //                                                                                                          //
 //  USE:                                                                                                    //
-//  1. In mission "init.sqf" add line: "0 = execVM "IgiLoad\IgiLoadInit.sqf";".                             //
-//  2. In vehicles "INITIALIZATION" field type: "0 = [this] execVM "IgiLoad\IgiLoad.sqf";"                  //
-//  3. Unload from script or trigger:                                                                       //
+//  1. In mission "init.sqf" add line: "0 = execVM "addons\Igiload\IgiLoadInit.sqf";".                             //
+//                                                                                                                                                                        //
+//  2. Unload from script or trigger:                                                                       //
 //      a) Unloading cargo from script. Force unload: "0 = [Car, true, "L"] spawn IL_Do_Unload;"            //
 //      b) Unloading cargo from script. Force unload: "0 = [Car, true] spawn IL_Do_Unload;"                 //
 //      c) Unloading cargo from script. Force unload: "0 = [Car] spawn IL_Do_Unload;"                       //
-//  4. Loading cargo from script. Force load: "0 = [Car, [typeOf Box], "B", true, Box] spawn IL_Do_Load;"   //
+//  3. Loading cargo from script. Force load: "0 = [Car, [typeOf Box], "B", true, Box] spawn IL_Do_Load;"   //
 //                                                                                                          //
-//  Ways from points 1 and 2 can not be used simultaneously!!!                                              //
+//                                                                                                                                                                        //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
 waitUntil { time > 0 };
