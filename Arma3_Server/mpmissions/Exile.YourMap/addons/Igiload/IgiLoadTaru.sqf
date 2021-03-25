@@ -1,10 +1,10 @@
 /*
 This script is based on Xeno Taru mod from NorX Aengell.
 http://www.armaholic.com/page.php?id=27532
-
 Original author: NorX Aengell
 Rewrite and Epoch adaptation: Slayer
 
+Rewrite for Exile 1.0.4a by BdMdesigN aka LinuxGamesTV
 */
 
 IL_Taru_DevMod = false;
@@ -66,9 +66,25 @@ if (hasInterface && !isDedicated) then {
         };
         _helico = (_this select 0);
         _object_Verifier = false;
+        
+        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
+                                         "Land_Pod_Heli_Transport_04_bench_black_F",
+                                         "Land_Pod_Heli_Transport_04_covered_F",
+                                         "Land_Pod_Heli_Transport_04_covered_black_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                         "Land_Pod_Heli_Transport_04_repair_F",
+                                         "Land_Pod_Heli_Transport_04_repair_black_F",
+                                         "Land_Pod_Heli_Transport_04_box_F",
+                                         "Land_Pod_Heli_Transport_04_box_black_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
+        
         if (count (attachedObjects _helico) isEqualTo 0) exitwith {_object_Verifier};
         {
-            if (_x isKindOf "Pod_Heli_Transport_04_base_F") exitwith {_object_Verifier = true;};
+            if ((typeOf _x) in _ILr_Taru_Pods) exitwith {_object_Verifier = true;};
         } foreach attachedObjects _helico;
         if (IL_Taru_DevMod) then {
              diag_log format["IL_Verify_Attached_Object returns %1",_object_Verifier];
@@ -83,8 +99,25 @@ if (hasInterface && !isDedicated) then {
         };
         _pod = getSlingLoad (_this select 0);
         _pod_Verifier = false;
+        
+        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
+                                         "Land_Pod_Heli_Transport_04_bench_black_F",
+                                         "Land_Pod_Heli_Transport_04_covered_F",
+                                         "Land_Pod_Heli_Transport_04_covered_black_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                         "Land_Pod_Heli_Transport_04_repair_F",
+                                         "Land_Pod_Heli_Transport_04_repair_black_F",
+                                         "Land_Pod_Heli_Transport_04_box_F",
+                                         "Land_Pod_Heli_Transport_04_box_black_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
+        
+        
         if (isnull (getSlingLoad vehicle player)) exitwith {_pod_Verifier};
-        if (_pod isKindOf "Pod_Heli_Transport_04_base_F") then {_pod_Verifier = true;};
+        if ((typeOf _pod) in _ILr_Taru_Pods) then {_pod_Verifier = true;};
         if (IL_Taru_DevMod) then {
              diag_log format["IL_Verify_Pod returns %1",_pod_Verifier];
         };
@@ -232,7 +265,7 @@ IL_Client_Control = {
 
 if (isDedicated || isServer) then {
     if (IL_Taru_DevMod) then {
-         diag_log "Igi Load Taru started";
+         diag_log "Igi Load Reloaded Taru started";
     };
 
     IL_Server_Pod_Manager = {
@@ -279,29 +312,49 @@ if (isDedicated || isServer) then {
                 _helico setCustomWeightRTD 680;
                 _helico setmass _mass_of_pod + _mass_of_heli;
             };
-
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_black_F") exitwith
+            {
+                _pod attachTo [_helico,[0,0.1,-1.13]];
+                _helico setCustomWeightRTD 680;
+                _helico setmass _mass_of_pod + _mass_of_heli;
+            };
             if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_F") exitwith
             {
                 _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
                 _helico setCustomWeightRTD 1413;
                 _helico setmass _mass_of_pod + _mass_of_heli;
             };
-
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_black_F") exitwith
+            {
+                _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
+                _helico setCustomWeightRTD 1413;
+                _helico setmass _mass_of_pod + _mass_of_heli;
+            };
             if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_F") exitwith
             {
                 _pod attachTo [_helico,[0,-0.282,-1.25]];
                 _helico setCustomWeightRTD 13311;
                 _helico setmass _mass_of_pod + _mass_of_heli;
             };
-
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_black_F") exitwith
+            {
+                _pod attachTo [_helico,[0,-0.282,-1.25]];
+                _helico setCustomWeightRTD 13311;
+                _helico setmass _mass_of_pod + _mass_of_heli;
+            };
             if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") exitwith
             {
                 _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
                 _helico setCustomWeightRTD 1321;
                 _helico setmass _mass_of_pod + _mass_of_heli;
             };
-
-            if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_ammo_F"]) exitwith
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_black_F") exitwith
+            {
+                _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
+                _helico setCustomWeightRTD 1321;
+                _helico setmass _mass_of_pod + _mass_of_heli;
+            };
+            if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_repair_black_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_box_black_F","Land_Pod_Heli_Transport_04_ammo_F","Land_Pod_Heli_Transport_04_ammo_black_F"]) exitwith
             {
                 _pod attachTo [_helico,[-0.09,-1.05,-1.1]];
                 _helico setCustomWeightRTD 1270;
@@ -328,8 +381,24 @@ if (isDedicated || isServer) then {
         _helico = _this select 0;
         _attached_object = [];
         _mass_of_heli = getmass _helico;
+        
+        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
+                                         "Land_Pod_Heli_Transport_04_bench_black_F",
+                                         "Land_Pod_Heli_Transport_04_covered_F",
+                                         "Land_Pod_Heli_Transport_04_covered_black_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                         "Land_Pod_Heli_Transport_04_repair_F",
+                                         "Land_Pod_Heli_Transport_04_repair_black_F",
+                                         "Land_Pod_Heli_Transport_04_box_F",
+                                         "Land_Pod_Heli_Transport_04_box_black_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
+        
         {
-            if (_x isKindOf "Pod_Heli_Transport_04_base_F") exitwith {_attached_object = _x;};
+             if ((typeOf _x) in _ILr_Taru_Pods) exitwith {_attached_object = _x;};
         } foreach attachedObjects _helico;
 
         _mass_of_pod = getmass _attached_object;
@@ -341,23 +410,35 @@ if (isDedicated || isServer) then {
             {
                 _attached_object attachTo [_helico,[0,0.1,-2.83]];
             };
-
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_black_F") exitwith
+            {
+                _attached_object attachTo [_helico,[0,0.1,-2.83]];
+            };
             if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_F") exitwith
             {
                 _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
             };
-
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_black_F") exitwith
+            {
+                _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
+            };
             if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_F") exitwith
             {
                 _attached_object attachTo [_helico,[0,-0.282,-3.05]];
             };
-
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_black_F") exitwith
+            {
+                _attached_object attachTo [_helico,[0,-0.282,-3.05]];
+            };
             if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") exitwith
             {
                 _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
             };
-
-            if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_ammo_F"]) exitwith
+            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_black_F") exitwith
+            {
+                _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
+            };
+            if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_repair_black_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_box_black_F","Land_Pod_Heli_Transport_04_ammo_F","Land_Pod_Heli_Transport_04_ammo_black_F"]) exitwith
             {
                 _attached_object attachTo [_helico,[-0.09,-1.05,-2.8]];
             };
@@ -384,9 +465,24 @@ if (isDedicated || isServer) then {
     {
         _helico = _this select 0;
         _attached_object = [];
-
+        
+        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
+                                         "Land_Pod_Heli_Transport_04_bench_black_F",
+                                         "Land_Pod_Heli_Transport_04_covered_F",
+                                         "Land_Pod_Heli_Transport_04_covered_black_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_F",
+                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                         "Land_Pod_Heli_Transport_04_repair_F",
+                                         "Land_Pod_Heli_Transport_04_repair_black_F",
+                                         "Land_Pod_Heli_Transport_04_box_F",
+                                         "Land_Pod_Heli_Transport_04_box_black_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_F",
+                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_F",
+                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
+        
         {
-            if (_x isKindOf "Pod_Heli_Transport_04_base_F") exitwith {_attached_object = _x;};
+             if ((typeOf _x) in _ILr_Taru_Pods) exitwith {_attached_object = _x;};
         } foreach attachedObjects _helico;
 
         _helico disableCollisionWith _attached_object;
@@ -465,9 +561,25 @@ if (isDedicated || isServer) then {
             sleep 20;
             {
                sleep 2;
+          
+                _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
+                                                "Land_Pod_Heli_Transport_04_bench_black_F",
+                                                "Land_Pod_Heli_Transport_04_covered_F",
+                                                "Land_Pod_Heli_Transport_04_covered_black_F",
+                                                "Land_Pod_Heli_Transport_04_medevac_F",
+                                                "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                                "Land_Pod_Heli_Transport_04_repair_F",
+                                                "Land_Pod_Heli_Transport_04_repair_black_F",
+                                                "Land_Pod_Heli_Transport_04_box_F",
+                                                "Land_Pod_Heli_Transport_04_box_black_F",
+                                                "Land_Pod_Heli_Transport_04_ammo_F",
+                                                "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                                "Land_Pod_Heli_Transport_04_fuel_F",
+                                                "Land_Pod_Heli_Transport_04_fuel_black_F"];
+
                //when you dropping with parachute or deattaching pod without player, new position of the pod is not saved to db.
                //with following ugly hack we are saving pod position every 20 seconds
-               if (_x isKindOf "Pod_Heli_Transport_04_base_F") then {
+               if ((typeOf _x) in _ILr_Taru_Pods) then {
                   _x call ExileServer_object_vehicle_database_update;
                };
             } forEach vehicles;
