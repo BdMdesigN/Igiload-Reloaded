@@ -66,22 +66,36 @@ if (hasInterface && !isDedicated) then {
         };
         _helico = (_this select 0);
         _object_Verifier = false;
-        
-        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
-                                         "Land_Pod_Heli_Transport_04_bench_black_F",
-                                         "Land_Pod_Heli_Transport_04_covered_F",
-                                         "Land_Pod_Heli_Transport_04_covered_black_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
-                                         "Land_Pod_Heli_Transport_04_repair_F",
-                                         "Land_Pod_Heli_Transport_04_repair_black_F",
-                                         "Land_Pod_Heli_Transport_04_box_F",
-                                         "Land_Pod_Heli_Transport_04_box_black_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
-        
+
+            _ILr_Taru_Pods = ["Land_Heli_Pods_Transport_04_ammo_F",
+                                            "Land_Heli_Pods_Transport_04_ammo_black_F",
+                                            "Land_Heli_Pods_Transport_04_bench_F",
+                                            "Land_Heli_Pods_Transport_04_bench_black_F",
+                                            "Land_Heli_Pods_Transport_04_box_F",
+                                            "Land_Heli_Pods_Transport_04_box_black_F",
+                                            "Land_Heli_Pods_Transport_04_covered_F",
+                                            "Land_Heli_Pods_Transport_04_covered_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_black_F",
+                                            "Land_Heli_Pods_Transport_04_repair_F",
+                                            "Land_Heli_Pods_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_bench_F",
+                                            "Land_Pod_Heli_Transport_04_bench_black_F",
+                                            "Land_Pod_Heli_Transport_04_covered_F",
+                                            "Land_Pod_Heli_Transport_04_covered_black_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                            "Land_Pod_Heli_Transport_04_repair_F",
+                                            "Land_Pod_Heli_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_box_F",
+                                            "Land_Pod_Heli_Transport_04_box_black_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_black_F"];
+                                            
         if (count (attachedObjects _helico) isEqualTo 0) exitwith {_object_Verifier};
         {
             if ((typeOf _x) in _ILr_Taru_Pods) exitwith {_object_Verifier = true;};
@@ -100,22 +114,35 @@ if (hasInterface && !isDedicated) then {
         _pod = getSlingLoad (_this select 0);
         _pod_Verifier = false;
         
-        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
-                                         "Land_Pod_Heli_Transport_04_bench_black_F",
-                                         "Land_Pod_Heli_Transport_04_covered_F",
-                                         "Land_Pod_Heli_Transport_04_covered_black_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
-                                         "Land_Pod_Heli_Transport_04_repair_F",
-                                         "Land_Pod_Heli_Transport_04_repair_black_F",
-                                         "Land_Pod_Heli_Transport_04_box_F",
-                                         "Land_Pod_Heli_Transport_04_box_black_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
-        
-        
+            _ILr_Taru_Pods = ["Land_Heli_Pods_Transport_04_ammo_F",
+                                            "Land_Heli_Pods_Transport_04_ammo_black_F",
+                                            "Land_Heli_Pods_Transport_04_bench_F",
+                                            "Land_Heli_Pods_Transport_04_bench_black_F",
+                                            "Land_Heli_Pods_Transport_04_box_F",
+                                            "Land_Heli_Pods_Transport_04_box_black_F",
+                                            "Land_Heli_Pods_Transport_04_covered_F",
+                                            "Land_Heli_Pods_Transport_04_covered_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_black_F",
+                                            "Land_Heli_Pods_Transport_04_repair_F",
+                                            "Land_Heli_Pods_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_bench_F",
+                                            "Land_Pod_Heli_Transport_04_bench_black_F",
+                                            "Land_Pod_Heli_Transport_04_covered_F",
+                                            "Land_Pod_Heli_Transport_04_covered_black_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                            "Land_Pod_Heli_Transport_04_repair_F",
+                                            "Land_Pod_Heli_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_box_F",
+                                            "Land_Pod_Heli_Transport_04_box_black_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_black_F"];
+                      
         if (isnull (getSlingLoad vehicle player)) exitwith {_pod_Verifier};
         if ((typeOf _pod) in _ILr_Taru_Pods) then {_pod_Verifier = true;};
         if (IL_Taru_DevMod) then {
@@ -306,60 +333,114 @@ if (isDedicated || isServer) then {
         _helico disableCollisionWith _pod;
         [] call {
             _pod_type = typeOf _pod;
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_F") exitwith
-            {
-                _pod attachTo [_helico,[0,0.1,-1.13]];
-                _helico setCustomWeightRTD 680;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_black_F") exitwith
-            {
-                _pod attachTo [_helico,[0,0.1,-1.13]];
-                _helico setCustomWeightRTD 680;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_F") exitwith
-            {
-                _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
-                _helico setCustomWeightRTD 1413;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_black_F") exitwith
-            {
-                _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
-                _helico setCustomWeightRTD 1413;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_F") exitwith
-            {
-                _pod attachTo [_helico,[0,-0.282,-1.25]];
-                _helico setCustomWeightRTD 13311;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_black_F") exitwith
-            {
-                _pod attachTo [_helico,[0,-0.282,-1.25]];
-                _helico setCustomWeightRTD 13311;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") exitwith
-            {
-                _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
-                _helico setCustomWeightRTD 1321;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_black_F") exitwith
-            {
-                _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
-                _helico setCustomWeightRTD 1321;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
-            if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_repair_black_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_box_black_F","Land_Pod_Heli_Transport_04_ammo_F","Land_Pod_Heli_Transport_04_ammo_black_F"]) exitwith
-            {
-                _pod attachTo [_helico,[-0.09,-1.05,-1.1]];
-                _helico setCustomWeightRTD 1270;
-                _helico setmass _mass_of_pod + _mass_of_heli;
-            };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_bench_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,0.1,-1.13]];
+                    _helico setCustomWeightRTD 680;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_bench_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,0.1,-1.13]];
+                    _helico setCustomWeightRTD 680;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_covered_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
+                    _helico setCustomWeightRTD 1413;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_covered_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
+                    _helico setCustomWeightRTD 1413;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_fuel_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,-0.282,-1.25]];
+                    _helico setCustomWeightRTD 13311;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_fuel_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,-0.282,-1.25]];
+                    _helico setCustomWeightRTD 13311;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_medevac_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
+                    _helico setCustomWeightRTD 1321;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_medevac_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
+                    _helico setCustomWeightRTD 1321;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type in ["Land_Heli_Pods_Transport_04_repair_F","Land_Heli_Pods_Transport_04_repair_black_F","Land_Heli_Pods_Transport_04_box_F","Land_Heli_Pods_Transport_04_box_black_F","Land_Heli_Pods_Transport_04_ammo_F","Land_Heli_Pods_Transport_04_ammo_black_F"]) exitwith
+                {
+                    _pod attachTo [_helico,[-0.09,-1.05,-1.1]];
+                    _helico setCustomWeightRTD 1270;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,0.1,-1.13]];
+                    _helico setCustomWeightRTD 680;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,0.1,-1.13]];
+                    _helico setCustomWeightRTD 680;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
+                    _helico setCustomWeightRTD 1413;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.1,-1.05,-0.82]];
+                    _helico setCustomWeightRTD 1413;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,-0.282,-1.25]];
+                    _helico setCustomWeightRTD 13311;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[0,-0.282,-1.25]];
+                    _helico setCustomWeightRTD 13311;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
+                    _helico setCustomWeightRTD 1321;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_black_F") exitwith
+                {
+                    _pod attachTo [_helico,[-0.14,-1.05,-0.92]];
+                    _helico setCustomWeightRTD 1321;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
+                if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_repair_black_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_box_black_F","Land_Pod_Heli_Transport_04_ammo_F","Land_Pod_Heli_Transport_04_ammo_black_F"]) exitwith
+                {
+                    _pod attachTo [_helico,[-0.09,-1.05,-1.1]];
+                    _helico setCustomWeightRTD 1270;
+                    _helico setmass _mass_of_pod + _mass_of_heli;
+                };
          };
 
         ["rope_unwind", _helico, _pod, 250, 1] call IL_Client_Control;
@@ -382,21 +463,35 @@ if (isDedicated || isServer) then {
         _attached_object = [];
         _mass_of_heli = getmass _helico;
         
-        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
-                                         "Land_Pod_Heli_Transport_04_bench_black_F",
-                                         "Land_Pod_Heli_Transport_04_covered_F",
-                                         "Land_Pod_Heli_Transport_04_covered_black_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
-                                         "Land_Pod_Heli_Transport_04_repair_F",
-                                         "Land_Pod_Heli_Transport_04_repair_black_F",
-                                         "Land_Pod_Heli_Transport_04_box_F",
-                                         "Land_Pod_Heli_Transport_04_box_black_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
-        
+        _ILr_Taru_Pods = ["Land_Heli_Pods_Transport_04_ammo_F",
+                                            "Land_Heli_Pods_Transport_04_ammo_black_F",
+                                            "Land_Heli_Pods_Transport_04_bench_F",
+                                            "Land_Heli_Pods_Transport_04_bench_black_F",
+                                            "Land_Heli_Pods_Transport_04_box_F",
+                                            "Land_Heli_Pods_Transport_04_box_black_F",
+                                            "Land_Heli_Pods_Transport_04_covered_F",
+                                            "Land_Heli_Pods_Transport_04_covered_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_black_F",
+                                            "Land_Heli_Pods_Transport_04_repair_F",
+                                            "Land_Heli_Pods_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_bench_F",
+                                            "Land_Pod_Heli_Transport_04_bench_black_F",
+                                            "Land_Pod_Heli_Transport_04_covered_F",
+                                            "Land_Pod_Heli_Transport_04_covered_black_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                            "Land_Pod_Heli_Transport_04_repair_F",
+                                            "Land_Pod_Heli_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_box_F",
+                                            "Land_Pod_Heli_Transport_04_box_black_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_black_F"];
+                      
         {
              if ((typeOf _x) in _ILr_Taru_Pods) exitwith {_attached_object = _x;};
         } foreach attachedObjects _helico;
@@ -406,42 +501,79 @@ if (isDedicated || isServer) then {
 
         [] call {
             _pod_type = typeOf _attached_object;
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_F") exitwith
-            {
-                _attached_object attachTo [_helico,[0,0.1,-2.83]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_black_F") exitwith
-            {
-                _attached_object attachTo [_helico,[0,0.1,-2.83]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_F") exitwith
-            {
-                _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_black_F") exitwith
-            {
-                _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_F") exitwith
-            {
-                _attached_object attachTo [_helico,[0,-0.282,-3.05]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_black_F") exitwith
-            {
-                _attached_object attachTo [_helico,[0,-0.282,-3.05]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") exitwith
-            {
-                _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
-            };
-            if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_black_F") exitwith
-            {
-                _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
-            };
-            if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_repair_black_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_box_black_F","Land_Pod_Heli_Transport_04_ammo_F","Land_Pod_Heli_Transport_04_ammo_black_F"]) exitwith
-            {
-                _attached_object attachTo [_helico,[-0.09,-1.05,-2.8]];
-            };
+            
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_bench_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,0.1,-2.83]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_bench_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,0.1,-2.83]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_covered_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_covered_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_fuel_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,-0.282,-3.05]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_fuel_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,-0.282,-3.05]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_medevac_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
+                    };
+                    if (_pod_type isEqualTo "Land_Heli_Pods_Transport_04_medevac_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
+                    };
+                    if (_pod_type in ["Land_Heli_Pods_Transport_04_repair_F","Land_Heli_Pods_Transport_04_repair_black_F","Land_Heli_Pods_Transport_04_box_F","Land_Heli_Pods_Transport_04_box_black_F","Land_Heli_Pods_Transport_04_ammo_F","Land_Heli_Pods_Transport_04_ammo_black_F"]) exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.09,-1.05,-2.8]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,0.1,-2.83]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_bench_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,0.1,-2.83]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_covered_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.1,-1.05,-2.52]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,-0.282,-3.05]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_fuel_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[0,-0.282,-3.05]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
+                    };
+                    if (_pod_type isEqualTo "Land_Pod_Heli_Transport_04_medevac_black_F") exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.14,-1.05,-2.62]];
+                    };
+                    if (_pod_type in ["Land_Pod_Heli_Transport_04_repair_F","Land_Pod_Heli_Transport_04_repair_black_F","Land_Pod_Heli_Transport_04_box_F","Land_Pod_Heli_Transport_04_box_black_F","Land_Pod_Heli_Transport_04_ammo_F","Land_Pod_Heli_Transport_04_ammo_black_F"]) exitwith
+                    {
+                        _attached_object attachTo [_helico,[-0.09,-1.05,-2.8]];
+                    };
         };
 
         ["rope_unwind", _helico, _attached_object, 1,9, 10] call IL_Client_Control;
@@ -466,21 +598,35 @@ if (isDedicated || isServer) then {
         _helico = _this select 0;
         _attached_object = [];
         
-        _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
-                                         "Land_Pod_Heli_Transport_04_bench_black_F",
-                                         "Land_Pod_Heli_Transport_04_covered_F",
-                                         "Land_Pod_Heli_Transport_04_covered_black_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_F",
-                                         "Land_Pod_Heli_Transport_04_medevac_black_F",
-                                         "Land_Pod_Heli_Transport_04_repair_F",
-                                         "Land_Pod_Heli_Transport_04_repair_black_F",
-                                         "Land_Pod_Heli_Transport_04_box_F",
-                                         "Land_Pod_Heli_Transport_04_box_black_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_F",
-                                         "Land_Pod_Heli_Transport_04_ammo_black_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_F",
-                                         "Land_Pod_Heli_Transport_04_fuel_black_F"];
-        
+        _ILr_Taru_Pods = ["Land_Heli_Pods_Transport_04_ammo_F",
+                                            "Land_Heli_Pods_Transport_04_ammo_black_F",
+                                            "Land_Heli_Pods_Transport_04_bench_F",
+                                            "Land_Heli_Pods_Transport_04_bench_black_F",
+                                            "Land_Heli_Pods_Transport_04_box_F",
+                                            "Land_Heli_Pods_Transport_04_box_black_F",
+                                            "Land_Heli_Pods_Transport_04_covered_F",
+                                            "Land_Heli_Pods_Transport_04_covered_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_black_F",
+                                            "Land_Heli_Pods_Transport_04_repair_F",
+                                            "Land_Heli_Pods_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_bench_F",
+                                            "Land_Pod_Heli_Transport_04_bench_black_F",
+                                            "Land_Pod_Heli_Transport_04_covered_F",
+                                            "Land_Pod_Heli_Transport_04_covered_black_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                            "Land_Pod_Heli_Transport_04_repair_F",
+                                            "Land_Pod_Heli_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_box_F",
+                                            "Land_Pod_Heli_Transport_04_box_black_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_black_F"];
+
         {
              if ((typeOf _x) in _ILr_Taru_Pods) exitwith {_attached_object = _x;};
         } foreach attachedObjects _helico;
@@ -561,21 +707,35 @@ if (isDedicated || isServer) then {
             sleep 20;
             {
                sleep 2;
-          
-                _ILr_Taru_Pods = ["Land_Pod_Heli_Transport_04_bench_F",
-                                                "Land_Pod_Heli_Transport_04_bench_black_F",
-                                                "Land_Pod_Heli_Transport_04_covered_F",
-                                                "Land_Pod_Heli_Transport_04_covered_black_F",
-                                                "Land_Pod_Heli_Transport_04_medevac_F",
-                                                "Land_Pod_Heli_Transport_04_medevac_black_F",
-                                                "Land_Pod_Heli_Transport_04_repair_F",
-                                                "Land_Pod_Heli_Transport_04_repair_black_F",
-                                                "Land_Pod_Heli_Transport_04_box_F",
-                                                "Land_Pod_Heli_Transport_04_box_black_F",
-                                                "Land_Pod_Heli_Transport_04_ammo_F",
-                                                "Land_Pod_Heli_Transport_04_ammo_black_F",
-                                                "Land_Pod_Heli_Transport_04_fuel_F",
-                                                "Land_Pod_Heli_Transport_04_fuel_black_F"];
+        
+         _ILr_Taru_Pods = ["Land_Heli_Pods_Transport_04_ammo_F",
+                                            "Land_Heli_Pods_Transport_04_ammo_black_F",
+                                            "Land_Heli_Pods_Transport_04_bench_F",
+                                            "Land_Heli_Pods_Transport_04_bench_black_F",
+                                            "Land_Heli_Pods_Transport_04_box_F",
+                                            "Land_Heli_Pods_Transport_04_box_black_F",
+                                            "Land_Heli_Pods_Transport_04_covered_F",
+                                            "Land_Heli_Pods_Transport_04_covered_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_black_F",
+                                            "Land_Heli_Pods_Transport_04_fuel_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_F",
+                                            "Land_Heli_Pods_Transport_04_medevac_black_F",
+                                            "Land_Heli_Pods_Transport_04_repair_F",
+                                            "Land_Heli_Pods_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_bench_F",
+                                            "Land_Pod_Heli_Transport_04_bench_black_F",
+                                            "Land_Pod_Heli_Transport_04_covered_F",
+                                            "Land_Pod_Heli_Transport_04_covered_black_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_F",
+                                            "Land_Pod_Heli_Transport_04_medevac_black_F",
+                                            "Land_Pod_Heli_Transport_04_repair_F",
+                                            "Land_Pod_Heli_Transport_04_repair_black_F",
+                                            "Land_Pod_Heli_Transport_04_box_F",
+                                            "Land_Pod_Heli_Transport_04_box_black_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_F",
+                                            "Land_Pod_Heli_Transport_04_ammo_black_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_F",
+                                            "Land_Pod_Heli_Transport_04_fuel_black_F"];
 
                //when you dropping with parachute or deattaching pod without player, new position of the pod is not saved to db.
                //with following ugly hack we are saving pod position every 20 seconds
