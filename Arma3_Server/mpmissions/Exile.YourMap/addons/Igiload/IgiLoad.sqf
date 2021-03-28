@@ -654,7 +654,26 @@ if (isnil "IL_Variables") then
         "B_Slingload_01_Medical_F",
         "B_Slingload_01_Fuel_F",
         "B_Slingload_01_Repair_F",
-        "B_Slingload_01_Cargo_F"
+        "B_Slingload_01_Cargo_F",
+        "Land_Heli_Pods_Transport_04_ammo_F",
+        "Land_Heli_Pods_Transport_04_ammo_black_F",
+        "Land_Heli_Pods_Transport_04_bench_F",
+        "Land_Heli_Pods_Transport_04_bench_black_F",
+        "Land_Heli_Pods_Transport_04_box_F",
+        "Land_Heli_Pods_Transport_04_box_black_F",
+        "Land_Heli_Pods_Transport_04_covered_F",
+        "Land_Heli_Pods_Transport_04_covered_black_F",
+        "Land_Heli_Pods_Transport_04_fuel_F",
+        "Land_Heli_Pods_Transport_04_fuel_black_F",
+        "Land_Heli_Pods_Transport_04_medevac_F",
+        "Land_Heli_Pods_Transport_04_medevac_black_F",
+        "Land_Heli_Pods_Transport_04_repair_F",
+        "Land_Heli_Pods_Transport_04_repair_black_F",
+        "Land_Heli_Pods_Transport_01_Ammo_F",
+        "Land_Heli_Pods_Transport_01_Cargo_F",
+        "Land_Heli_Pods_Transport_01_Fuel_F",
+        "Land_Heli_Pods_Transport_01_Medevac_F",
+        "Land_Heli_Pods_Transport_01_Repair_F"
     ];
     IL_Supported_APC =
     [
