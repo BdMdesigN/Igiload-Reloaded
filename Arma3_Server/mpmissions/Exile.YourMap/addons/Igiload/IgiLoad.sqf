@@ -545,41 +545,6 @@ if (isnil "IL_Variables") then
         "Box_East_AmmoVeh_F",
         "Box_IND_AmmoVeh_F",
         "Box_EAF_AmmoVeh_F",
-        "Box_Ammo_F",
-        "Box_Wps_F",
-        "Box_FIA_Ammo_F",
-        "Box_FIA_Support_F",
-        "Box_FIA_Wps_F",
-        "Box_Syndicate_Wps_F",
-        "Box_Syndicate_Ammo_F",
-        "Box_Syndicate_WpsLaunch_F",
-        "Box_NATO_Support_F",
-        "Box_NATO_Wps_F",
-        "Box_T_NATO_Wps_F",
-        "Box_NATO_WpsSpecial_F",
-        "Box_T_NATO_WpsSpecial_F",
-        "Box_NATO_Ammo_F",
-        "Box_NATO_Grenades_F",
-        "Box_NATO_WpsLaunch_F",
-        "Box_IND_Support_F",
-        "Box_EAF_Support_F",
-        "Box_EAF_Ammo_F",
-        "Box_East_Support_F",
-        "Box_East_WpsLaunch_F"
-        "Box_East_Ammo_F",
-        "Box_T_East_Ammo_F",
-        "Box_East_Wps_F",
-        "Box_T_East_Wps_F",
-        "Box_East_WpsSpecial_F",
-        "Box_T_East_WpsSpecial_F",
-        "Box_IND_Ammo_F",
-        "Box_IND_WpsLaunch_F",
-        "Box_EAF_WpsLaunch_F",
-        "Box_IND_WpsLaunch_F",
-        "Box_IND_WpsSpecial_F",
-        "Box_EAF_WpsSpecial_F",
-        "Box_IND_Wps_F",
-        "Box_EAF_Wps_F",
         "Land_CargoBox_V1_F",
         "ASC_B_box",
         "CargoNet_01_box_F",
@@ -592,7 +557,7 @@ if (isnil "IL_Variables") then
     ];
     IL_Supported_Barrel =
     [
-        /*
+
         "Land_BarrelEmpty_F",
         "Land_BarrelEmpty_grey_F",
         "Land_BarrelSand_F",
@@ -602,8 +567,8 @@ if (isnil "IL_Variables") then
         "Land_BarrelWater_F",
         "Land_BarrelWater_grey_F",
         "Land_MetalBarrel_F"
-        */
-    ];  // "Land_MetalBarrel_empty_F","MetalBarrel_burning_F"];
+    ]; 
+    // "Land_MetalBarrel_empty_F","MetalBarrel_burning_F"];
     IL_Supported_Tank =
     [
         /*
@@ -633,15 +598,26 @@ if (isnil "IL_Variables") then
     ];
     IL_Supported_Box_H1 =
     [
+        "Box_Wps_F",
         "Box_NATO_Wps_F",
+        "Box_T_NATO_Wps_F",
         "Box_East_Wps_F",
+        "Box_T_East_Wps_F",
+        "Box_EAF_Wps_F",
+        "Box_FIA_Wps_F",
         "Box_IND_Wps_F",
+        "Box_Syndicate_Wps_F",
         "Box_East_WpsLaunch_F",
+        "Box_EAF_WpsLaunch_F",
         "Box_NATO_WpsLaunch_F",
         "Box_IND_WpsLaunch_F",
+        "Box_Syndicate_WpsLaunch_F",
         "Box_IND_WpsSpecial_F",
         "Box_East_WpsSpecial_F",
+        "Box_T_East_WpsSpecial_F",
+        "Box_EAF_WpsSpecial_F",
         "Box_NATO_WpsSpecial_F",
+        "Box_T_NATO_WpsSpecial_F",
         "Box_mas_all_rifle_Wps_F",
         "Box_mas_us_rifle_Wps_F",
         "Box_mas_ru_rifle_Wps_F",
@@ -656,11 +632,18 @@ if (isnil "IL_Variables") then
         "Box_NATO_Grenades_F",
         "Box_East_Grenades_F",
         "Box_IND_Grenades_F",
+        "Box_Ammo_F",
         "Box_NATO_Ammo_F",
         "Box_East_Ammo_F",
+        "Box_FIA_Ammo_F",
+        "Box_T_East_Ammo_F",
+        "Box_EAF_Ammo_F",
         "Box_IND_Ammo_F",
+        "Box_Syndicate_Ammo_F",
         "Box_IND_Support_F",
         "Box_East_Support_F",
+        "Box_EAF_Support_F",
+        "Box_FIA_Support_F",
         "Box_NATO_Support_F"
     ];
     IL_Supported_Cargo20 =
